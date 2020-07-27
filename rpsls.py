@@ -1,4 +1,12 @@
 import random
+def rpsls(player_choice,computer_choice):
+    d=(computer_choice-player_choice)%5
+    if d==1 or d==2:
+        print("computer wins")
+    elif d==0:
+        print("Spiel zieht")
+    else:
+        print("player wins")
 
 def name_to_number(name):
 
@@ -39,21 +47,15 @@ def number_to_name(num):
 name=input("Player Choice  :").lower()
 #comp_number=name_to_number(name)
 print(name.upper())
+p_choice=name_to_number(name)
+
+
 
 #num=int(input("Computer's Guess"))
 
-comp_choice=random.randrange(0,4)
+comp_number=random.randrange(0,4)
 
-player_number=number_to_name(comp_choice).upper()
-print(player_number)
+computer_choice=number_to_name(comp_number).upper()
+print(computer_choice)
 
-
-
-
-
-
-def rpsls(player_choice): 
-    
-    
-    
-    return comp_choice
+rpsls(p_choice,comp_number)
